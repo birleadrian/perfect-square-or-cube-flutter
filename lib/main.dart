@@ -121,17 +121,18 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: () {
           checkIfSquareOrCube();
           showDialog<String>(
-              context: context,
-              builder: (BuildContext context) => AlertDialog(
-                    title: Text('Check result for $number'),
-                    content: Text(currentMessage),
-                    actions: <Widget>[
-                      TextButton(
-                        onPressed: () => Navigator.pop(context, 'OK'),
-                        child: const Text('OK'),
-                      ),
-                    ],
-                  ));
+            context: context,
+            builder: (BuildContext context) => AlertDialog(
+              title: Text('Check result for $number'),
+              content: Text(currentMessage),
+              actions: <Widget>[
+                TextButton(
+                  onPressed: () => Navigator.pop(context, 'OK'),
+                  child: const Text('OK'),
+                ),
+              ],
+            ),
+          );
         },
         tooltip: 'Check',
         child: const Icon(Icons.check),
